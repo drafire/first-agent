@@ -50,7 +50,10 @@ public class HelloworldController {
         this.dashScopeChatClient = chatClientBuilder
                 .defaultSystem(DEFAULT_PROMPT)
                 .defaultAdvisors(
-                    MessageChatMemoryAdvisor.builder(MessageWindowChatMemory.builder().build()).build())
+                    MessageChatMemoryAdvisor.builder(MessageWindowChatMemory.builder()
+                                    .maxMessages(500) // 窗口最大的消息数量
+                                    .build())
+                            .build())
                 .defaultAdvisors(new SimpleLoggerAdvisor())
                 // 设置 ChatClient 中 ChatModel 的 Options 参数
                 .defaultOptions(
