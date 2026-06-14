@@ -1,0 +1,19 @@
+server:
+  port: 18080
+
+spring:
+  application:
+    name: spring-ai-alibaba-helloworld
+  config:
+    import: optional:classpath:apiKey.yml # 使用optional防止文件不存在时报错
+
+  ai:
+    dashscope:
+      api-key: ${ali.api-key}
+
+
+  springdoc:
+    api-docs:
+      path: /v3/api-docs
+    swagger-ui:
+      path: /swagger-ui.html
