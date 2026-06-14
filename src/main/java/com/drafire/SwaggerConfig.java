@@ -14,12 +14,12 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Spring AI Alibaba Helloworld API")
+                        .title("first agent API")
                         .version("1.0.0")
-                        .description("Spring AI Alibaba Helloworld Example - AI 聊天助手 API 文档")
+                        .description("first agent - AI 聊天助手 API 文档")
                         .contact(new Contact()
-                                .name("yuluo")
-                                .email("yuluo08290126@gmail.com"))
+                                .name("drafire")
+                                .email(""))
                         .license(new License()
                                 .name("Apache 2.0")
                                 .url("https://www.apache.org/licenses/LICENSE-2.0.html")));
