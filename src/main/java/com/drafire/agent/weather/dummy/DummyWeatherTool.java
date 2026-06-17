@@ -1,12 +1,13 @@
 package com.drafire.agent.weather.dummy;
 
+import com.drafire.agent.weather.WeatherRequest;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.ai.chat.model.ToolContext;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-public class WeatherTool implements BiFunction<WeatherRequest, ToolContext, String> {
+public class DummyWeatherTool implements BiFunction<WeatherRequest, ToolContext, String> {
     @Override
     public String apply(WeatherRequest weatherRequest, ToolContext toolContext) {
         return "it's very rainy in in " + weatherRequest.getCity();

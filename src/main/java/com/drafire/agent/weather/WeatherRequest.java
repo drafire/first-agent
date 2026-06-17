@@ -1,4 +1,4 @@
-package com.drafire.agent.weather.dummy;
+package com.drafire.agent.weather;
 
 public class WeatherRequest {
     private String city;

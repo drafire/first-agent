@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.drafire;
+package com.drafire.controller;
 
 import com.alibaba.cloud.ai.dashscope.chat.DashScopeChatOptions;
 import io.swagger.v3.oas.annotations.Operation;
