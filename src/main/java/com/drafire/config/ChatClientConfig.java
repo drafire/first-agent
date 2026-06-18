@@ -1,5 +1,6 @@
 package com.drafire.config;
 
+import com.alibaba.cloud.ai.dashscope.chat.DashScopeChatOptions;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
@@ -16,6 +17,10 @@ public class ChatClientConfig {
                 .defaultAdvisors(MessageChatMemoryAdvisor.builder(chatMemory)
                         .build())
                 .defaultAdvisors(SimpleLoggerAdvisor.builder().build())
+                .defaultOptions(DashScopeChatOptions.builder()
+                        .topK(5)
+                        .temperature(0.7)
+                        .build())
                 .build();
     }
 }
