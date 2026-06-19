@@ -15,11 +15,20 @@ spring:
   ai:
     dashscope:
       api-key: ${ali.api-key}
+      embedding:
+        options:
+          model: text-embedding-v4     # 指定百炼的向量化模型
+          dimensions: 1024              # 🚨 核心避坑：明确指定输出维度为 768
     chat:
       memory:
         repository:
           jdbc:
             initialize-schema: always  # 启动时自动创建表
+    alibaba:
+      playground:
+        bailian:
+          enable: true
+          index-name: "drafire-test" # 例如: saa-playground-2
 
   springdoc:
     api-docs:
